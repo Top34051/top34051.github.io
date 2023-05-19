@@ -38,11 +38,11 @@ function Publications() {
             )}
           </p>
           {publication.abstract && (
-            <div className="mr-2">
+            <a className="mr-2">
               <button className="text-xs py-1 px-3 mt-2 border text-white font-semibold bg-gray-500 border-gray-700 hover:bg-gray-700 rounded transition duration-200" onClick={() => handleAbstractToggle(index)}>
                 {showAbstract && selectedPublication === index ? 'Hide Abstract' : 'Show Abstract'}
               </button>
-            </div>
+            </a>
           )}
           {publication.paperLink && (
             <a href={publication.paperLink} rel="noopener" className="mr-2">
