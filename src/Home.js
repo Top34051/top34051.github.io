@@ -32,8 +32,8 @@ function Home() {
             </h1>
             <p className="text-gray-600 mb-3">
               Welcome to my academic personal website! I have recently graduated from 
-              the <b>University of Wisconsin-Madison</b>, where I completed my undergraduate degree in computer science 
-              and data science. I will be joining <b>Stanford University</b> as a Masters student in computer science in Fall 2023.
+              the University of Wisconsin-Madison, where I completed my undergraduate degree in computer science 
+              and data science. I will be joining Stanford University as a Masters student in computer science in Fall 2023.
             </p>
             <p className="text-gray-600 mb-3">
               During my time at UW-Madison, I was fortunate to be advised by <a href="https://pages.cs.wisc.edu/~sharonli/" rel="external" className="text-blue-500 hover:text-blue-700">Prof. Sharon Li</a>.
