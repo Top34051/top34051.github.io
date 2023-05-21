@@ -1,7 +1,7 @@
 import React from 'react';
-import GoogleImage from './google.png';
-import DataWowImage from './datawow.png';
-import UWMadisonImage from './uw-madison.png';
+import GoogleImage from '../assets/images/google.png';
+import DataWowImage from '../assets/images/datawow.png';
+import UWMadisonImage from '../assets/images/uw-madison.png';
 
 const experiences = [
   {

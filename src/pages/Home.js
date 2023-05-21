@@ -1,15 +1,14 @@
 import React from 'react';
-import './App.css';
 import { TypeAnimation } from 'react-type-animation';
 import { FaGithub, FaGraduationCap, FaLinkedin } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
 
-import profileImage from './profile-image.jpg';
-import Publication from './Publications';
-import Projects from './Projects';
-import Awards from './Awards';
-import Experiences from './Experiences';
-import CV from './burapacheep_cv_2022.pdf';
+import profileImage from '../assets/images/profile-image.jpg';
+import Publication from '../components/Publications';
+import Projects from '../components/Projects';
+import Awards from '../components/Awards';
+import Experiences from '../components/Experiences';
+import CV from '../assets/files/burapacheep_cv_2022.pdf';
 
 
 function Home() {
@@ -21,9 +20,9 @@ function Home() {
             <h1 className="text-4xl font-bold mb-6">
               <TypeAnimation
                 sequence={[
-                  'Top Burapacheep', 3000,
-                  'Jirayu Burapacheep', 3000,
-                  'จิรายุ บูรพาชีพ', 3000,
+                  'Top Burapacheep', 5000,
+                  'Jirayu Burapacheep', 5000,
+                  'จิรายุ บูรพาชีพ', 5000,
                 ]}
                 wrapper="span"
                 cursor={true}
@@ -36,12 +35,12 @@ function Home() {
               and data science. I will be joining Stanford University as a Masters student in computer science in Fall 2023.
             </p>
             <p className="text-gray-600 mb-3">
-              During my time at UW-Madison, I was fortunate to be advised by <a href="https://pages.cs.wisc.edu/~sharonli/" rel="external" className="text-blue-500 hover:text-blue-700">Prof. Sharon Li</a>.
-              My broad research interests are in the area of deep learning, with a focus on trustworthy machine learning and representation learning.
+              During my time at UW-Madison, I was fortunate to be advised by <a href="https://pages.cs.wisc.edu/~sharonli/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">Prof. Sharon Li</a>.
+              My broad research interests are in the area of deep learning, with a focus on trustworthy machine learning via representation learning and contrastive learning.
             </p>
             <p className="text-gray-600 mb-10">
               I also has deep passion in competitive programming and algorithmic problem solving. I represented UW-Madison at ICPC 2020 World Finals, advised 
-              by <a href="https://pages.cs.wisc.edu/~dieter/" rel="external" className="text-blue-500 hover:text-blue-700">Prof. Dieter van Melkebeek</a>.
+              by <a href="https://pages.cs.wisc.edu/~dieter/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">Prof. Dieter van Melkebeek</a>.
             </p>
             <div className="flex mb-2 space-x-3">
               <p className="text-gray-600 font-bold">Links:</p>

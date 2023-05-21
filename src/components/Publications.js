@@ -38,21 +38,19 @@ function Publications() {
             )}
           </p>
           {publication.abstract && (
-            <a className="mr-2">
-              <button className="text-xs py-1 px-3 mt-2 border text-white font-semibold bg-gray-500 border-gray-700 hover:bg-gray-700 rounded transition duration-200" onClick={() => handleAbstractToggle(index)}>
-                {showAbstract && selectedPublication === index ? 'Hide Abstract' : 'Show Abstract'}
-              </button>
-            </a>
+            <button className="text-xs py-1 px-3 mt-2 mr-2 border text-white font-semibold bg-gray-500 border-gray-700 hover:bg-gray-700 rounded transition duration-200" onClick={() => handleAbstractToggle(index)}>
+              {showAbstract && selectedPublication === index ? 'Hide Abstract' : 'Show Abstract'}
+            </button>
           )}
           {publication.paperLink && (
-            <a href={publication.paperLink} rel="noopener" className="mr-2">
+            <a href={publication.paperLink} target="_blank" rel="noopener noreferrer" className="mr-2">
               <button className="text-xs py-1 px-3 mt-2 border text-white font-semibold bg-blue-500 border-blue-700  hover:bg-blue-700 rounded transition duration-200">
                 Paper
               </button>
             </a>
           )}
           {publication.githubLink && (
-            <a href={publication.githubLink} rel="noopener" className="mr-2">
+            <a href={publication.githubLink} target="_blank" rel="noopener noreferrer" className="mr-2">
               <button className="text-xs py-1 px-3 mt-2 border text-white font-semibold bg-yellow-500 border-yellow-600  hover:bg-yellow-600 rounded transition duration-200">
                 View on GitHub
               </button>

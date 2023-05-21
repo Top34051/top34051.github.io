@@ -43,7 +43,7 @@ function Projects() {
                 </div>
             )}
             {project.link && (
-              <a href={project.link} rel="external" className="mr-2">
+              <a href={project.link} target="_blank" rel="noopener noreferrer" className="mr-2">
                 <button className="text-xs py-1 px-3 border text-white font-semibold bg-green-600 border-green-700  hover:bg-green-700 rounded transition duration-200">
                   Website
                 </button>
