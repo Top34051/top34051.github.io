@@ -10,19 +10,21 @@ import Awards from '../components/Awards';
 import Experiences from '../components/Experiences';
 import CV from '../assets/files/burapacheep_cv_2022.pdf';
 
-
 function Home() {
   return (
     <div className="bg-sky-100 min-h-screen flex items-center justify-center">
       <div className="max-w-4xl mx-auto my-10 p-6 bg-white shadow rounded">
-        <div className="flex">
-          <div className="w-3/4 mr-7">
+        <div className="flex flex-col md:flex-row">
+          <div className="md:w-3/4 md:mr-7">
             <h1 className="text-4xl font-bold mb-6">
               <TypeAnimation
                 sequence={[
-                  'Top Burapacheep', 5000,
-                  'Jirayu Burapacheep', 5000,
-                  'จิรายุ บูรพาชีพ', 5000,
+                  'Top Burapacheep',
+                  5000,
+                  'Jirayu Burapacheep',
+                  5000,
+                  'จิรายุ บูรพาชีพ',
+                  5000,
                 ]}
                 wrapper="span"
                 cursor={true}
@@ -30,17 +32,13 @@ function Home() {
               />
             </h1>
             <p className="text-gray-600 mb-3">
-              Welcome to my academic personal website! I have recently graduated from 
-              the University of Wisconsin-Madison, where I completed my undergraduate degree in computer science 
-              and data science. I will be joining Stanford University as a Masters student in computer science in Fall 2023.
+              Welcome to my academic personal website! I have recently graduated from the University of Wisconsin-Madison, where I completed my undergraduate degree in computer science and data science. I will be joining Stanford University as a Masters student in computer science in Fall 2023.
             </p>
             <p className="text-gray-600 mb-3">
-              During my time at UW-Madison, I was fortunate to be advised by <a href="https://pages.cs.wisc.edu/~sharonli/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">Prof. Sharon Li</a>.
-              My broad research interests are in the area of deep learning, with a focus on trustworthy machine learning via representation learning and contrastive learning.
+              During my time at UW-Madison, I was fortunate to be advised by <a href="https://pages.cs.wisc.edu/~sharonli/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">Prof. Sharon Li</a>. My broad research interests are in the area of deep learning, with a focus on trustworthy machine learning via representation learning and contrastive learning.
             </p>
             <p className="text-gray-600 mb-10">
-              I also has deep passion in competitive programming and algorithmic problem solving. I represented UW-Madison at ICPC 2020 World Finals, advised 
-              by <a href="https://pages.cs.wisc.edu/~dieter/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">Prof. Dieter van Melkebeek</a>.
+              I also have a deep passion for competitive programming and algorithmic problem solving. I represented UW-Madison at ICPC 2020 World Finals, advised by <a href="https://pages.cs.wisc.edu/~dieter/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">Prof. Dieter van Melkebeek</a>.
             </p>
             <div className="flex mb-2 space-x-3">
               <p className="text-gray-600 font-bold">Links:</p>
@@ -77,7 +75,7 @@ function Home() {
                 <MdEmail size={24} />
               </a>
             </div>
-            <ul className="flex space-x-4 items-center">
+            <ul className="flex flex-wrap space-x-4 items-center">
               <p className="text-gray-600 font-bold">Jump to:</p>
               <li>
                 <a href="#publications" className="text-blue-500 hover:text-blue-700">
@@ -106,7 +104,7 @@ function Home() {
               </li>
             </ul>
           </div>
-          <div className="w-1/4">
+          <div className="md:w-1/4 md:mt-0 mt-4">
             <img src={profileImage} alt="Profile" className="rounded-md h-auto w-full" />
           </div>
         </div>
