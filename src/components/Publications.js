@@ -38,7 +38,7 @@ function Publications() {
             )}
           </p>
           {publication.abstract && (
-            <button className="text-xs py-1 px-3 mt-2 mr-2 border text-white font-semibold bg-gray-500 border-gray-700 hover:bg-gray-700 rounded transition duration-200" onClick={() => handleAbstractToggle(index)}>
+            <button className="text-xs py-1 px-3 mt-3 mr-2 border text-white font-semibold bg-gray-500 border-gray-700 hover:bg-gray-700 rounded transition duration-200" onClick={() => handleAbstractToggle(index)}>
               {showAbstract && selectedPublication === index ? 'Hide Abstract' : 'Show Abstract'}
             </button>
           )}
