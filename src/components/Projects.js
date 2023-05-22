@@ -39,12 +39,12 @@ function Projects() {
             )}
             {project.description && (
                 <div>
-                    <b>Description:</b> <span dangerouslySetInnerHTML={{ __html: project.description }} /><br />
+                    <b>Description:</b> <span dangerouslySetInnerHTML={{ __html: project.description }} />
                 </div>
             )}
             {project.link && (
               <a href={project.link} target="_blank" rel="noopener noreferrer" className="mr-2">
-                <button className="text-xs py-1 px-3 border text-white font-semibold bg-green-600 border-green-700  hover:bg-green-700 rounded transition duration-200">
+                <button className="text-xs py-1 px-3 mt-3 border text-white font-semibold bg-green-600 border-green-700  hover:bg-green-700 rounded transition duration-200">
                   Website
                 </button>
               </a>
