@@ -8,6 +8,7 @@ import Publication from '../components/Publications';
 import Projects from '../components/Projects';
 import Awards from '../components/Awards';
 import Experiences from '../components/Experiences';
+import Skills from '../components/Skills';
 import CV from '../assets/files/burapacheep_cv_2022.pdf';
 
 function Home() {
@@ -123,6 +124,10 @@ function Home() {
         <hr className="my-5" />
         <div id="projects">
           <Projects />
+        </div>
+        <hr className="my-5" />
+        <div id="skills">
+          <Skills />
         </div>
         <div className="mt-5 text-center text-sm text-gray-500">
           &copy; {new Date().getFullYear()} Jirayu Burapacheep. All rights reserved.
