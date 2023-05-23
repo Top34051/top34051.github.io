@@ -3,7 +3,7 @@ import React from 'react';
 
 const awards = [
   {
-    title: 'ICPC 2020 World Finals, High Honor Award',
+    title: 'ICPC 2020 World Finals, High Honor Award (17th place)',
     year: '2021',
     description: 'Ranked 17th in ICPC 2020 World Finals (4th place among all North American teams) and 1st in the North Central North American Regional Contest 2020',
   },
