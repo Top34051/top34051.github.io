@@ -28,7 +28,7 @@ function Skills() {
           <h3 className="text-lg font-bold mt-2">{group.name}</h3>
           <div className="mt-1">
             {group.items.map((item, index) => (
-              <button className="text-sm py-1 px-3 mt-1 font-semibold bg-sky-200 hover:bg-sky-300 rounded-full transition duration-200 mr-1">
+              <button className="text-sm py-1 px-3 mt-1 font-semibold text-gray-800 bg-sky-200 hover:bg-sky-300 rounded-full transition duration-200 mr-1">
                 {item}
               </button>
             ))}
