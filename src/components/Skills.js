@@ -14,7 +14,7 @@ const groups = [
     items: ["ReactJS", "NodeJS", "ExpressJS", "Redux", "TailwindCSS", "Flask", "Celery"]
   },
   {
-    name: "Data Platforms",
+    name: "Data and Cloud",
     items: ["Docker", "Hadoop", "Spark", "Cassandra", "Kafka", "BigQuery", "PostgreSQL", "MongoDB", "Elasticsearch", "AWS", "Azure", "Google Cloud Platform"]
   },
 ]
