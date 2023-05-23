@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.78051aef.css",
-    "main.js": "/static/js/main.360291ee.js",
+    "main.css": "/static/css/main.520dafc3.css",
+    "main.js": "/static/js/main.eda358e5.js",
     "static/js/787.d80c571c.chunk.js": "/static/js/787.d80c571c.chunk.js",
     "static/media/profile-image.jpg": "/static/media/profile-image.d03e528f4b311422099f.jpg",
     "static/media/uw-madison.png": "/static/media/uw-madison.3b63ed66903daa2eeee8.png",
     "static/media/google.png": "/static/media/google.f34acd08a40efe59187f.png",
     "static/media/burapacheep_cv_2022.pdf": "/static/media/burapacheep_cv_2022.af670dec7426ca10422d.pdf",
     "index.html": "/index.html",
-    "main.78051aef.css.map": "/static/css/main.78051aef.css.map",
-    "main.360291ee.js.map": "/static/js/main.360291ee.js.map",
+    "main.520dafc3.css.map": "/static/css/main.520dafc3.css.map",
+    "main.eda358e5.js.map": "/static/js/main.eda358e5.js.map",
     "787.d80c571c.chunk.js.map": "/static/js/787.d80c571c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.78051aef.css",
-    "static/js/main.360291ee.js"
+    "static/css/main.520dafc3.css",
+    "static/js/main.eda358e5.js"
   ]
 }
