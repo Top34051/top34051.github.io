@@ -9,7 +9,7 @@ import Projects from '../components/Projects';
 import Awards from '../components/Awards';
 import Experiences from '../components/Experiences';
 import Skills from '../components/Skills';
-import CV from '../assets/files/burapacheep_cv_2022.pdf';
+import CV from '../assets/files/burapacheep_cv_2023.pdf';
 
 function Home() {
   return (
