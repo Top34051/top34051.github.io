@@ -10,6 +10,7 @@ import Awards from '../components/Awards';
 import Experiences from '../components/Experiences';
 import Skills from '../components/Skills';
 import CV from '../assets/files/burapacheep_cv_2023.pdf';
+import Resume from '../assets/files/burapacheep_resume_2023.pdf';
 
 function Home() {
   return (
@@ -101,6 +102,11 @@ function Home() {
               <li>
                 <a href={CV} className="text-blue-500 hover:text-blue-700">
                   <b>CV</b>
+                </a>
+              </li>
+              <li>
+                <a href={Resume} className="text-blue-500 hover:text-blue-700">
+                  <b>Resume</b>
                 </a>
               </li>
             </ul>
