@@ -79,7 +79,7 @@ function Experiences() {
                     <img src={experience.image} alt="Experience Logo" className="object-cover" />
                   )}
                 </div>
-                <div>
+                <div className="max-w-4/5">
                   <h2 className="text-l font-bold">{experience.title}</h2>
                   <h2 className="text-sm font-bold mt-1"><span dangerouslySetInnerHTML={{ __html: experience.subtitle }} /></h2>
                 </div>
@@ -112,7 +112,7 @@ function Experiences() {
                     <img src={experience.image} alt="Experience Logo" className="object-cover" />
                   )}
                 </div>
-                <div>
+                <div className="max-w-4/5">
                   <h2 className="text-l font-bold">{experience.title}</h2>
                   <h2 className="text-sm font-bold mt-1"><span dangerouslySetInnerHTML={{ __html: experience.subtitle }} /></h2>
                 </div>

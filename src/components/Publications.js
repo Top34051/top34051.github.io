@@ -2,12 +2,19 @@ import React, { useState } from 'react';
 
 const publications = [
   {
-    title: 'A critical appraisal of equity in conversational AI: Evidence from auditing GPT-3\'s dialogues with different publics on climate change and Black Lives Matter',
+    title: 'Conversational AI and equity through assessing GPT-3\'s communication with diverse social groups on contentious topics',
     authors: 'Kaiping Chen, Anqi Shao, <b>Jirayu Burapacheep</b>, Yixuan Li',
-    year: '2022',
-    abstract: 'Autoregressive language models, which use deep learning to produce human-like texts, have become increasingly widespread. Such models are powering popular virtual assistants in areas like smart health, finance, and autonomous driving. While the parameters of these large language models are improving, concerns persist that these models might not work equally for all subgroups in society. Despite growing discussions of AI fairness across disciplines, there lacks systemic metrics to assess what equity means in dialogue systems and how to engage different populations in the assessment loop. Grounded in theories of deliberative democracy and science and technology studies, this paper proposes an analytical framework for unpacking the meaning of equity in human-AI dialogues. Using this framework, we conducted an auditing study to examine how GPT-3 responded to different sub-populations on crucial science and social topics: climate change and the Black Lives Matter (BLM) movement. Our corpus consists of over 20,000 rounds of dialogues between GPT-3 and 3290 individuals who vary in gender, race and ethnicity, education level, English as a first language, and opinions toward the issues. We found a substantively worse user experience with GPT-3 among the opinion and the education minority subpopulations; however, these two groups achieved the largest knowledge gain, changing attitudes toward supporting BLM and climate change efforts after the chat. We traced these user experience divides to conversational differences and found that GPT-3 used more negative expressions when it responded to the education and opinion minority groups, compared to its responses to the majority groups. We discuss the implications of our findings for a deliberative conversational AI system that centralizes diversity, equity, and inclusion.',
-    paperLink: 'https://arxiv.org/abs/2209.13627',
+    year: '2023',
+    abstract: 'Autoregressive language models, which use deep learning to produce human-like texts, have surged in prevalence. Despite advances in these models, concerns arise about their equity across diverse populations. While AI fairness is discussed widely, metrics to measure equity in dialogue systems are lacking. This paper presents a framework, rooted in deliberative democracy and science communication studies, to evaluate equity in human–AI communication. Using it, we conducted an algorithm auditing study to examine how GPT-3 responded to different populations who vary in sociodemographic backgrounds and viewpoints on crucial science and social issues: climate change and the Black Lives Matter (BLM) movement. We analyzed 20,000 dialogues with 3290 participants differing in gender, race, education, and opinions. We found a substantively worse user experience among the opinion minority groups (e.g., climate deniers, racists) and the education minority groups; however, these groups changed attitudes toward supporting BLM and climate change efforts much more compared to other social groups after the chat. GPT-3 used more negative expressions when responding to the education and opinion minority groups. We discuss the social-technological implications of our findings for a conversational AI system that centralizes diversity, equity, and inclusion.',
+    paperLink: 'https://www.nature.com/articles/s41598-024-51969-w',
     githubLink: 'https://github.com/top34051/chat-with-gpt-3',
+  },
+  {
+    title: 'Alignment as Reward-Guided Search',
+    authors: 'Maxim Khanov, <b>Jirayu Burapacheep</b>, Yixuan Li',
+    year: '2023',
+    abstract: 'Aligning large language models with human objectives is paramount, yet common approaches including RLHF suffer from unstable and resource-intensive training. In response to this challenge, we introduce ARGS, Alignment as Reward-Guided Search, a novel framework that integrates alignment into the decoding process, eliminating the need for expensive RL training. By adjusting the model\'s probabilistic predictions using a reward signal, ARGS generates texts with semantic diversity while being aligned with human preferences, offering a promising and flexible solution for aligning language models. Notably, our method demonstrates consistent enhancements in average reward compared to baselines across diverse alignment tasks and various model dimensions. For example, under the same greedy-based decoding strategy, our method improves the average reward by 19.56% relative to the baseline and secures a preference or tie score of 64.33% in GPT-4 evaluation. We believe that our framework, emphasizing test-time alignment, paves the way for more responsive language models in the future.',
+    paperLink: 'https://openreview.net/forum?id=shgx0eqdw6',
   },
   // Add more publications as needed
 ];
@@ -32,9 +39,9 @@ function Publications() {
           <p className="text-sm text-gray-600">
             <b>Authors:</b> <span dangerouslySetInnerHTML={{ __html: publication.authors }} /><br />
             {publication.year && (
-                <div>
-                    <b>Year:</b> <span dangerouslySetInnerHTML={{ __html: publication.year }} /><br />
-                </div>
+              <div>
+                <b>Year:</b> <span dangerouslySetInnerHTML={{ __html: publication.year }} /><br />
+              </div>
             )}
           </p>
           {publication.abstract && (
