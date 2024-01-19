@@ -15,16 +15,8 @@ const experiences = [
   {
     title: 'Undergraduate Research Assistant',
     subtitle: 'Under a collaboration between the Department of Life Sciences Communication (Professor Kaiping Chen) <br> and the Department of Computer Science (Professor Sharon Li), UW-Madison',
-    date: 'Sep 2021 - Now',
+    date: 'Sep 2021 - Sep 2022',
     description: 'Contributed to the conversational data collection part of the research by building a web application that collects interaction between survey participants and OpenAI\'s GPT-3 chatbot model.',
-    category: 'Academic',
-    image: UWMadisonImage,
-  },
-  {
-    title: 'Undergraduate Research Assistant',
-    subtitle: 'Research Group led by Professor Sharon Li, Department of Computer Science, UW-Madison',
-    date: 'Sep 2021 - Now',
-    description: 'Studied different approaches to out-of-distribution detection and representation learning.',
     category: 'Academic',
     image: UWMadisonImage,
   },
@@ -33,6 +25,14 @@ const experiences = [
     subtitle: 'COMP SCI 880 Quantum Algorithms, UW-Madison',
     date: 'Spring 2023',
     description: 'Graded homework assignments for the graduate-level course on quantum algorithms.',
+    category: 'Academic',
+    image: UWMadisonImage,
+  },
+  {
+    title: 'Undergraduate Research Assistant',
+    subtitle: 'Research Group led by Professor Sharon Li, Department of Computer Science, UW-Madison',
+    date: 'Sep 2021 - Oct 2023',
+    description: 'Studied different approaches to out-of-distribution detection and representation learning.',
     category: 'Academic',
     image: UWMadisonImage,
   },
@@ -67,7 +67,6 @@ function Experiences() {
   return (
     <div className="w-full">
       <h2 className="text-2xl font-bold">Experiences</h2>
-
       {academicExperiences.length > 0 && (
         <>
           <h3 className="text-lg font-bold mt-5">Academic Experiences</h3>
