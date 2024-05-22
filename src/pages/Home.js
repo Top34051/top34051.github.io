@@ -10,7 +10,7 @@ import Awards from '../components/Awards';
 import Experiences from '../components/Experiences';
 import Skills from '../components/Skills';
 import CV from '../assets/files/burapacheep_cv_2023.pdf';
-import Resume from '../assets/files/burapacheep_resume_2023.pdf';
+import Resume from '../assets/files/burapacheep_resume_2024.pdf';
 
 function Home() {
   return (
