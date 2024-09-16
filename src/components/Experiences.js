@@ -2,6 +2,7 @@ import React from 'react';
 import GoogleImage from '../assets/images/google.png';
 import DataWowImage from '../assets/images/datawow.png';
 import UWMadisonImage from '../assets/images/uw-madison.png';
+import CitadelImage from '../assets/images/citadel.png';
 
 const experiences = [
   {
@@ -52,6 +53,14 @@ const experiences = [
     category: 'Industry',
     image: GoogleImage,
   },
+  {
+    title: 'Quantitative Research Engineer Intern',
+    subtitle: "Citadel LLC",
+    date: 'May 2024 - Aug 2024',
+    description: 'Citadel GQS datalayer',
+    category: 'Industry',
+    image: CitadelImage,
+  }
   // Add more experiences as needed
 ];
 

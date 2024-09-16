@@ -34,7 +34,7 @@ function Home() {
               />
             </h1>
             <p className="text-gray-600 mb-3">
-              Welcome to my academic personal website! I have recently graduated from the University of Wisconsin-Madison, where I completed my undergraduate degree in computer science and data science. I will be joining Stanford University as a Masters student in computer science in Fall 2023.
+              Welcome to my academic personal website! I am currently a second year master student studying computer science at Stanford University. I have obtained an undergraduate degree in computer science and data science from the University of Wisconsin-Madison.
             </p>
             <p className="text-gray-600 mb-3">
               During my time at UW-Madison, I was fortunate to be advised by <a href="https://pages.cs.wisc.edu/~sharonli/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">Prof. Sharon Li</a>. My broad research interests are in the area of deep learning, with a focus on trustworthy machine learning via representation learning and contrastive learning.

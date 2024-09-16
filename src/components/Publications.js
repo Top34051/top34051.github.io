@@ -26,7 +26,16 @@ const publications = [
     abstract: 'This paper introduces the ColorSwap dataset, designed to assess and improve the proficiency of multimodal models in matching objects with their colors. The dataset is comprised of 2,000 unique image-caption pairs, grouped into 1,000 examples. Each example includes a caption-image pair, along with a ``color-swapped\'\' pair. We follow the Winoground schema: the two captions in an example have the same words, but the color words have been rearranged to modify different objects. The dataset was created through a novel blend of automated caption and image generation with humans in the loop. We evaluate image-text matching (ITM) and visual language models (VLMs) and find that even the latest ones are still not robust at this task. GPT-4V and LLaVA score 72% and 42% on our main VLM metric, although they may improve with more advanced prompting techniques. On the main ITM metric, contrastive models such as CLIP and SigLIP perform close to chance (at 12% and 30%, respectively), although the non-contrastive BLIP ITM model is stronger (87%). We also find that finetuning on fewer than 2,000 examples yields significant performance gains on this out-of-distribution word-order understanding task.',
     paperLink: 'https://arxiv.org/abs/2404.00001',
     githubLink: 'https://github.com/Top34051/colorswap',
-    venue: 'ACL 2024',
+    venue: 'ACL Findings 2024',
+  },
+  {
+    title: 'Your Classifier Can Be Secretly a Likelihood-Based OOD Detector',
+    authors: '<b>Jirayu Burapacheep</b>, Yixuan Li',
+    year: '2024',
+    abstract: 'The ability to detect out-of-distribution (OOD) inputs is critical to guarantee the reliability of classification models deployed in an open environment. A fundamental challenge in OOD detection is that a discriminative classifier is typically trained to estimate the posterior probability p(y|z) for class y given an input z, but lacks the explicit likelihood estimation of p(z) ideally needed for OOD detection. While numerous OOD scoring functions have been proposed for classification models, these estimate scores are often heuristic-driven and cannot be rigorously interpreted as likelihood. To bridge the gap, we propose Intrinsic Likelihood (INK), which offers rigorous likelihood interpretation to modern discriminative-based classifiers. Specifically, our proposed INK score operates on the constrained latent embeddings of a discriminative classifier, which are modeled as a mixture of hyperspherical embeddings with constant norm. We draw a novel connection between the hyperspherical distribution and the intrinsic likelihood, which can be effectively optimized in modern neural networks. Extensive experiments on the OpenOOD benchmark empirically demonstrate that INK establishes a new state-of-the-art in a variety of OOD detection setups, including both far-OOD and near-OOD. Code is available at this https URL.',
+    paperLink: 'https://arxiv.org/abs/2408.04851',
+    githubLink: 'https://github.com/deeplearning-wisc/ink',
+    venue: 'Preprint',
   }
   // Add more publications as needed
 ];
@@ -47,6 +56,11 @@ function Publications() {
       <h2 className="text-2xl font-bold">Publications</h2>
       {reversedPublications.map((publication, index) => (
         <div key={index} className="mt-3 border bg-white rounded shadow p-4">
+          {publication.venue && publication.venue !== 'Preprint' && (
+            <p className="text-sm py-1 px-3 mb-2 mr-2 border text-white font-semibold bg-emerald-600 border-none rounded">
+              {publication.venue}
+            </p>
+          )}
           <h2 className="text-l font-bold mb-2">{publication.title}</h2>
           <p className="text-sm text-gray-600">
             <b>Authors:</b> <span dangerouslySetInnerHTML={{ __html: publication.authors }} /><br />
@@ -56,11 +70,6 @@ function Publications() {
               </div>
             )}
           </p>
-          {publication.venue && (
-            <button className="text-sm py-1 px-3 mt-3 mr-2 border text-white font-semibold bg-red-500 border-none rounded-full">
-              {publication.venue}
-            </button>
-          )}
           {publication.abstract && (
             <button className="text-xs w-32 py-1 px-3 mt-3 mr-2 border text-white font-semibold bg-gray-500 border-gray-700 hover:bg-gray-700 rounded transition duration-200" onClick={() => handleAbstractToggle(index)}>
               {showAbstract && selectedPublication === index ? 'Hide Abstract' : 'Show Abstract'}
