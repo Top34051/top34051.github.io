@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/static/css/main.c45d2560.css",
-    "main.js": "/static/js/main.f4fee717.js",
+    "main.js": "/static/js/main.4cf5e944.js",
     "static/js/787.d80c571c.chunk.js": "/static/js/787.d80c571c.chunk.js",
     "static/media/profile-image.jpg": "/static/media/profile-image.d03e528f4b311422099f.jpg",
     "static/media/citadel.png": "/static/media/citadel.5294310e8b36ee963d09.png",
     "static/media/burapacheep_resume_2024.pdf": "/static/media/burapacheep_resume_2024.8a9ed415cb65cca48af4.pdf",
+    "static/media/google.png": "/static/media/google.b41f74cb0e54b299e185.png",
     "static/media/uw-madison.png": "/static/media/uw-madison.3b63ed66903daa2eeee8.png",
-    "static/media/google.png": "/static/media/google.f34acd08a40efe59187f.png",
     "static/media/burapacheep_cv_2023.pdf": "/static/media/burapacheep_cv_2023.dfc27f489852e72d658d.pdf",
     "static/media/stanford_logo.png": "/static/media/stanford_logo.171e7e9125bd52f3c0a3.png",
     "index.html": "/index.html",
     "main.c45d2560.css.map": "/static/css/main.c45d2560.css.map",
-    "main.f4fee717.js.map": "/static/js/main.f4fee717.js.map",
+    "main.4cf5e944.js.map": "/static/js/main.4cf5e944.js.map",
     "787.d80c571c.chunk.js.map": "/static/js/787.d80c571c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c45d2560.css",
-    "static/js/main.f4fee717.js"
+    "static/js/main.4cf5e944.js"
   ]
 }
