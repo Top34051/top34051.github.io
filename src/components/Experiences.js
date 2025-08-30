@@ -3,6 +3,7 @@ import GoogleImage from '../assets/images/google.png';
 import DataWowImage from '../assets/images/datawow.png';
 import UWMadisonImage from '../assets/images/uw-madison.png';
 import CitadelImage from '../assets/images/citadel.png';
+import StanfordImage from '../assets/images/stanford_logo.png';
 
 const experiences = [
   {
@@ -24,8 +25,8 @@ const experiences = [
   {
     title: 'Grader (Graduate-level Course)',
     subtitle: 'COMP SCI 880 Quantum Algorithms, UW-Madison',
-    date: 'Spring 2023',
-    description: 'Graded homework assignments for the graduate-level course on quantum algorithms.',
+    date: 'Jan 2023 - May 2023',
+    description: 'Grade assignments for COMP SCI 880: Quantum Algorithms course at UW-Madison. Provide constructive feedback to students on technical work related to assignments.',
     category: 'Academic',
     image: UWMadisonImage,
   },
@@ -36,6 +37,22 @@ const experiences = [
     description: 'Studied different approaches to out-of-distribution detection and representation learning.',
     category: 'Academic',
     image: UWMadisonImage,
+  },
+  {
+    title: 'Graduate Research Assistant',
+    subtitle: 'Stanford NLP',
+    date: 'Nov 2023 - Mar 2025',
+    description: 'Worked on (1) evaluation of vision-language model on word-order understanding task and (2) LLM-based inconsistency detection',
+    category: 'Academic',
+    image: StanfordImage,
+  },
+  {
+    title: 'Course Assistant',
+    subtitle: 'Stanford University',
+    date: 'Sep 2024 - Dec 2024',
+    description: 'Course assistant for CS161: Introduction to Algorithm at Stanford University',
+    category: 'Academic',
+    image: StanfordImage,
   },
   {
     title: 'Machine Learning Engineer Intern',
@@ -57,7 +74,15 @@ const experiences = [
     title: 'Quantitative Research Engineer Intern',
     subtitle: "Citadel LLC",
     date: 'May 2024 - Aug 2024',
-    description: 'Citadel GQS datalayer',
+    description: 'Implemented and improved data pipeline and research framework for Citadel\'s GQS team (C++ and Python)',
+    category: 'Industry',
+    image: CitadelImage,
+  },
+  {
+    title: 'Quantitative Research Engineer',
+    subtitle: "Citadel LLC",
+    date: 'Aug 2024 - Present',
+    description: 'Streamlined data pipeline specialized in ensuring data quality and regression (C++ and Python)',
     category: 'Industry',
     image: CitadelImage,
   }
@@ -76,10 +101,11 @@ function Experiences() {
   return (
     <div className="w-full">
       <h2 className="text-2xl font-bold">Experiences</h2>
-      {academicExperiences.length > 0 && (
+
+      {industryExperiences.length > 0 && (
         <>
-          <h3 className="text-lg font-bold mt-5">Academic Experiences</h3>
-          {academicExperiences.map((experience, index) => (
+          <h3 className="text-lg font-bold mt-5">Industry Experiences</h3>
+          {industryExperiences.map((experience, index) => (
             <div key={index} className="mt-3 border bg-white rounded shadow p-4">
               <div className="flex items-center">
                 <div className="flex mr-3 h-12 w-12">
@@ -109,10 +135,10 @@ function Experiences() {
         </>
       )}
 
-      {industryExperiences.length > 0 && (
+      {academicExperiences.length > 0 && (
         <>
-          <h3 className="text-lg font-bold mt-5">Industry Experiences</h3>
-          {industryExperiences.map((experience, index) => (
+          <h3 className="text-lg font-bold mt-5">Academic Experiences</h3>
+          {academicExperiences.map((experience, index) => (
             <div key={index} className="mt-3 border bg-white rounded shadow p-4">
               <div className="flex items-center">
                 <div className="flex mr-3 h-12 w-12">

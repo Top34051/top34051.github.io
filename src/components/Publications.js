@@ -12,7 +12,7 @@ const publications = [
   },
   {
     title: 'Alignment as Reward-Guided Search',
-    authors: 'Maxim Khanov, <b>Jirayu Burapacheep</b>, Yixuan Li',
+    authors: 'Maxim Khanov*, <b>Jirayu Burapacheep</b>*, Yixuan Li',
     year: '2024',
     abstract: 'Aligning large language models with human objectives is paramount, yet common approaches including RLHF suffer from unstable and resource-intensive training. In response to this challenge, we introduce ARGS, Alignment as Reward-Guided Search, a novel framework that integrates alignment into the decoding process, eliminating the need for expensive RL training. By adjusting the model\'s probabilistic predictions using a reward signal, ARGS generates texts with semantic diversity while being aligned with human preferences, offering a promising and flexible solution for aligning language models. Notably, our method demonstrates consistent enhancements in average reward compared to baselines across diverse alignment tasks and various model dimensions. For example, under the same greedy-based decoding strategy, our method improves the average reward by 19.56% relative to the baseline and secures a preference or tie score of 64.33% in GPT-4 evaluation. We believe that our framework, emphasizing test-time alignment, paves the way for more responsive language models in the future.',
     paperLink: 'https://openreview.net/forum?id=shgx0eqdw6',
@@ -26,7 +26,7 @@ const publications = [
     abstract: 'This paper introduces the ColorSwap dataset, designed to assess and improve the proficiency of multimodal models in matching objects with their colors. The dataset is comprised of 2,000 unique image-caption pairs, grouped into 1,000 examples. Each example includes a caption-image pair, along with a ``color-swapped\'\' pair. We follow the Winoground schema: the two captions in an example have the same words, but the color words have been rearranged to modify different objects. The dataset was created through a novel blend of automated caption and image generation with humans in the loop. We evaluate image-text matching (ITM) and visual language models (VLMs) and find that even the latest ones are still not robust at this task. GPT-4V and LLaVA score 72% and 42% on our main VLM metric, although they may improve with more advanced prompting techniques. On the main ITM metric, contrastive models such as CLIP and SigLIP perform close to chance (at 12% and 30%, respectively), although the non-contrastive BLIP ITM model is stronger (87%). We also find that finetuning on fewer than 2,000 examples yields significant performance gains on this out-of-distribution word-order understanding task.',
     paperLink: 'https://arxiv.org/abs/2404.00001',
     githubLink: 'https://github.com/Top34051/colorswap',
-    venue: 'ACL Findings 2024',
+    venue: 'ACL 2024 (Findings)',
   },
   {
     title: 'Your Classifier Can Be Secretly a Likelihood-Based OOD Detector',
@@ -35,8 +35,17 @@ const publications = [
     abstract: 'The ability to detect out-of-distribution (OOD) inputs is critical to guarantee the reliability of classification models deployed in an open environment. A fundamental challenge in OOD detection is that a discriminative classifier is typically trained to estimate the posterior probability p(y|z) for class y given an input z, but lacks the explicit likelihood estimation of p(z) ideally needed for OOD detection. While numerous OOD scoring functions have been proposed for classification models, these estimate scores are often heuristic-driven and cannot be rigorously interpreted as likelihood. To bridge the gap, we propose Intrinsic Likelihood (INK), which offers rigorous likelihood interpretation to modern discriminative-based classifiers. Specifically, our proposed INK score operates on the constrained latent embeddings of a discriminative classifier, which are modeled as a mixture of hyperspherical embeddings with constant norm. We draw a novel connection between the hyperspherical distribution and the intrinsic likelihood, which can be effectively optimized in modern neural networks. Extensive experiments on the OpenOOD benchmark empirically demonstrate that INK establishes a new state-of-the-art in a variety of OOD detection setups, including both far-OOD and near-OOD. Code is available at this https URL.',
     paperLink: 'https://arxiv.org/abs/2408.04851',
     githubLink: 'https://github.com/deeplearning-wisc/ink',
-    venue: 'Preprint',
-  }
+    venue: 'TMLR 2024',
+  },
+  {
+    title: 'Detecting Corpus-Level Knowledge Inconsistencies in Wikipedia with Large Language Models',
+    authors: 'Sina J. Semnani, <b>Jirayu Burapacheep</b>, Arpandeep Khatua, Thanawan Atchariyachanvanit, Zheng Wang, Monica S. Lam',
+    year: '2025',
+    abstract: 'Wikipedia is the largest open knowledge corpus, widely used worldwide and serving as a key resource for training large language models (LLMs) and retrieval-augmented generation (RAG) systems. Ensuring its accuracy is therefore critical. But how accurate is Wikipedia? In this paper, we focus on inconsistencies, a specific type of factual inaccuracy. We introduce the task of corpus-level inconsistency detection and present a human-annotated dataset for this task. We also propose an agent-based system combining an LLM with information retrieval to effectively identify inconsistencies, which outperforms strong LLM baselines by 2.1% in terms of AUROC on our dataset. Based on our findings, we estimate that at least 79.9 million facts (approximately 3.3%) in the English Wikipedia contradict at least one other fact within the corpus (99% confidence interval: 37.6 million to 121.9 million). We further show that these inconsistencies propagate into widely-used NLP datasets, affecting gold labels in at least 7.3% of examples in the fact-verification dataset FEVEROUS and 4.0% in the question-answering dataset AmbigQA. In a user study with experienced Wikipedia editors, 87.5% of participants reported increased confidence in identifying inconsistencies when using our system, discovering on average 64.7% more inconsistencies in the same amount of time. Our results demonstrate that LLM-based tools can effectively assist humans in detecting inconsistencies in large-scale corpora.',
+    paperLink: '',
+    githubLink: '',
+    venue: 'EMNLP 2025 (Main)',
+  },
   // Add more publications as needed
 ];
 

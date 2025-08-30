@@ -34,10 +34,10 @@ function Home() {
               />
             </h1>
             <p className="text-gray-600 mb-3">
-              Welcome to my academic personal website! I am currently a second year master student studying computer science at Stanford University. I have obtained an undergraduate degree in computer science and data science from the University of Wisconsin-Madison.
+              Welcome to my academic personal website! I am currently working as a <b>Quantitative Research Engineer</b> at Citadel, where I work on the data team.
             </p>
             <p className="text-gray-600 mb-3">
-              During my time at UW-Madison, I was fortunate to be advised by <a href="https://pages.cs.wisc.edu/~sharonli/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">Prof. Sharon Li</a>. My broad research interests are in the area of deep learning, with a focus on trustworthy machine learning via representation learning and contrastive learning.
+              I recently graduated with a master's degree in computer science from Stanford University. I previously obtained an undergraduate degree in computer science and data science from the University of Wisconsin-Madison. During my time at UW-Madison, I was fortunate to be advised by <a href="https://pages.cs.wisc.edu/~sharonli/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">Prof. Sharon Li</a>. My broad research interests are in the area of deep learning, with a focus on trustworthy machine learning via representation learning and contrastive learning.
             </p>
             <p className="text-gray-600 mb-10">
               I also have a deep passion for competitive programming and algorithmic problem solving. I represented UW-Madison at ICPC 2020 World Finals, advised by <a href="https://pages.cs.wisc.edu/~dieter/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">Prof. Dieter van Melkebeek</a>.
