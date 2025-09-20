@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c45d2560.css",
-    "main.js": "/static/js/main.4cf5e944.js",
+    "main.css": "/static/css/main.0cb9c2af.css",
+    "main.js": "/static/js/main.59931274.js",
     "static/js/787.d80c571c.chunk.js": "/static/js/787.d80c571c.chunk.js",
     "static/media/profile-image.jpg": "/static/media/profile-image.d03e528f4b311422099f.jpg",
     "static/media/citadel.png": "/static/media/citadel.5294310e8b36ee963d09.png",
@@ -11,12 +11,12 @@
     "static/media/burapacheep_cv_2023.pdf": "/static/media/burapacheep_cv_2023.dfc27f489852e72d658d.pdf",
     "static/media/stanford_logo.png": "/static/media/stanford_logo.171e7e9125bd52f3c0a3.png",
     "index.html": "/index.html",
-    "main.c45d2560.css.map": "/static/css/main.c45d2560.css.map",
-    "main.4cf5e944.js.map": "/static/js/main.4cf5e944.js.map",
+    "main.0cb9c2af.css.map": "/static/css/main.0cb9c2af.css.map",
+    "main.59931274.js.map": "/static/js/main.59931274.js.map",
     "787.d80c571c.chunk.js.map": "/static/js/787.d80c571c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c45d2560.css",
-    "static/js/main.4cf5e944.js"
+    "static/css/main.0cb9c2af.css",
+    "static/js/main.59931274.js"
   ]
 }
