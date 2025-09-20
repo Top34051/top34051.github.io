@@ -9,6 +9,7 @@ import Projects from '../components/Projects';
 import Awards from '../components/Awards';
 import Experiences from '../components/Experiences';
 import Skills from '../components/Skills';
+import SectionDivider from '../components/SectionDivider';
 import CV from '../assets/files/burapacheep_cv_2023.pdf';
 import Resume from '../assets/files/burapacheep_resume_2024.pdf';
 
@@ -115,23 +116,23 @@ function Home() {
             <img src={profileImage} alt="Profile" className="rounded-md h-auto w-full" />
           </div>
         </div>
-        <hr className="my-5" />
+        <SectionDivider />
         <div id="publications">
           <Publication />
         </div>
-        <hr className="my-5" />
+        <SectionDivider />
         <div id="awards">
           <Awards />
         </div>
-        <hr className="my-5" />
+        <SectionDivider />
         <div id="experiences">
           <Experiences />
         </div>
-        <hr className="my-5" />
+        <SectionDivider />
         <div id="projects">
           <Projects />
         </div>
-        <hr className="my-5" />
+        <SectionDivider />
         <div id="skills">
           <Skills />
         </div>

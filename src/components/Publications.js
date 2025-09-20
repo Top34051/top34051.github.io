@@ -1,4 +1,8 @@
 import React, { useState } from 'react';
+import Card from './Card';
+import Badge from './Badge';
+import DateDisplay from './DateDisplay';
+import ActionButton from './ActionButton';
 
 const publications = [
   {
@@ -46,6 +50,15 @@ const publications = [
     githubLink: '',
     venue: 'EMNLP 2025 (Main)',
   },
+  {
+    title: 'Fantastic Bugs and Where to Find Them in AI Benchmarks',
+    authors: 'Sang T. Truong, Yuheng Tu, Michael Hardy, Anka Reuel, Zeyu Tang, <b>Jirayu Burapacheep</b>, Jonathan Jude Perera, Chibuike Uwakwe, Benjamin W. Domingue, Nick Haber, Sanmi Koyejo',
+    year: '2025',
+    abstract: 'Benchmarks are pivotal in driving progress in large language models, yet ambiguous questions, incorrect answer keys, and grading issues frequently undermine their reliability. Manually identifying and fixing issues among thousands of benchmark questions is not only infeasible but also a critical bottleneck for reliable evaluation. In this work, we introduce a scalable, theory-driven framework for systematic benchmark revision that leverages psychometric tools to flag problematic questions requiring expert review. We demonstrate that the No Free Lunch theorem applies directly to benchmark quality assessment: no detector can excel across all anomaly patterns, and effective detection requires prior anomaly knowledge. Furthermore, recognizing the high cost of LLM evaluations and the limited diversity of available LLMs, we assess each tool’s sensitivity to the number of model responses. Finally, across nine widely used benchmarks, our signals guide expert review to identify flawed questions with up to 84% precision, offering an efficient, scalable framework for systematic benchmark revision.',
+    paperLink: '',
+    githubLink: '',
+    venue: 'NeurIPS 2025 Datasets and Benchmarks Track',
+  },
   // Add more publications as needed
 ];
 
@@ -62,49 +75,53 @@ function Publications() {
 
   return (
     <div className="w-full">
-      <h2 className="text-2xl font-bold">Publications</h2>
-      {reversedPublications.map((publication, index) => (
-        <div key={index} className="mt-3 border bg-white rounded shadow p-4">
-          {publication.venue && publication.venue !== 'Preprint' && (
-            <p className="text-sm py-1 px-3 mb-2 mr-2 border text-white font-semibold bg-emerald-600 border-none rounded">
-              {publication.venue}
-            </p>
-          )}
-          <h2 className="text-l font-bold mb-2">{publication.title}</h2>
-          <p className="text-sm text-gray-600">
-            <b>Authors:</b> <span dangerouslySetInnerHTML={{ __html: publication.authors }} /><br />
-            {publication.year && (
-              <div>
-                <b>Year:</b> <span dangerouslySetInnerHTML={{ __html: publication.year }} /><br />
+      <h2 className="text-3xl font-bold mb-6 text-gray-900">Publications</h2>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-2">
+        {reversedPublications.map((publication, index) => (
+          <Card key={index}>
+            <div className="flex-grow">
+              <div className="flex items-start justify-between mb-1">
+                <div className="flex-grow">
+                  {publication.venue && publication.venue !== 'Preprint' && (
+                    <Badge>{publication.venue}</Badge>
+                  )}
+                  <h2 className="text-sm font-bold mb-1">{publication.title}</h2>
+                </div>
+                <DateDisplay date={publication.year} />
+              </div>
+              <p className="text-xs text-gray-600">
+                <span dangerouslySetInnerHTML={{ __html: publication.authors }} />
+              </p>
+            </div>
+            <div className="mt-2">
+              {publication.abstract && (
+                <ActionButton
+                  variant="abstract"
+                  onClick={() => handleAbstractToggle(index)}
+                  className="w-32"
+                >
+                  {showAbstract && selectedPublication === index ? 'Hide Abstract' : 'Show Abstract'}
+                </ActionButton>
+              )}
+              {publication.paperLink && (
+                <ActionButton variant="paper" href={publication.paperLink}>
+                  Paper
+                </ActionButton>
+              )}
+              {publication.githubLink && (
+                <ActionButton variant="code" href={publication.githubLink}>
+                  Code
+                </ActionButton>
+              )}
+            </div>
+            {showAbstract && selectedPublication === index && publication.abstract && (
+              <div className="text-xs text-gray-600 mt-2">
+                <span dangerouslySetInnerHTML={{ __html: publication.abstract }} />
               </div>
             )}
-          </p>
-          {publication.abstract && (
-            <button className="text-xs w-32 py-1 px-3 mt-3 mr-2 border text-white font-semibold bg-gray-500 border-gray-700 hover:bg-gray-700 rounded transition duration-200" onClick={() => handleAbstractToggle(index)}>
-              {showAbstract && selectedPublication === index ? 'Hide Abstract' : 'Show Abstract'}
-            </button>
-          )}
-          {publication.paperLink && (
-            <a href={publication.paperLink} target="_blank" rel="noopener noreferrer" className="mr-2">
-              <button className="text-xs py-1 px-3 mt-2 border text-white font-semibold bg-blue-500 border-blue-700  hover:bg-blue-700 rounded transition duration-200">
-                Paper
-              </button>
-            </a>
-          )}
-          {publication.githubLink && (
-            <a href={publication.githubLink} target="_blank" rel="noopener noreferrer" className="mr-2">
-              <button className="text-xs py-1 px-3 mt-2 border text-white font-semibold bg-yellow-500 border-yellow-600  hover:bg-yellow-600 rounded transition duration-200">
-                Code
-              </button>
-            </a>
-          )}
-          {showAbstract && selectedPublication === index && publication.abstract && (
-            <div className="text-sm text-gray-600 mt-2">
-              <b>Abstract:</b> <span dangerouslySetInnerHTML={{ __html: publication.abstract }} /><br />
-            </div>
-          )}
-        </div>
-      ))}
+          </Card>
+        ))}
+      </div>
     </div>
   );
 }

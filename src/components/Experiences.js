@@ -1,4 +1,6 @@
 import React from 'react';
+import Card from './Card';
+import DateDisplay from './DateDisplay';
 import GoogleImage from '../assets/images/google.png';
 import DataWowImage from '../assets/images/datawow.png';
 import UWMadisonImage from '../assets/images/uw-madison.png';
@@ -16,7 +18,7 @@ const experiences = [
   },
   {
     title: 'Undergraduate Research Assistant',
-    subtitle: 'Under a collaboration between the Department of Life Sciences Communication (Professor Kaiping Chen) <br> and the Department of Computer Science (Professor Sharon Li), UW-Madison',
+    subtitle: 'Under a collaboration between the Department of Life Sciences Communication (Professor Kaiping Chen) and the Department of Computer Science (Professor Sharon Li), UW-Madison',
     date: 'Sep 2021 - Sep 2022',
     description: 'Contributed to the conversational data collection part of the research by building a web application that collects interaction between survey participants and OpenAI\'s GPT-3 chatbot model.',
     category: 'Academic',
@@ -100,71 +102,79 @@ function Experiences() {
 
   return (
     <div className="w-full">
-      <h2 className="text-2xl font-bold">Experiences</h2>
+      <h2 className="text-3xl font-bold mb-6 text-gray-900">Experiences</h2>
 
       {industryExperiences.length > 0 && (
         <>
-          <h3 className="text-lg font-bold mt-5">Industry Experiences</h3>
-          {industryExperiences.map((experience, index) => (
-            <div key={index} className="mt-3 border bg-white rounded shadow p-4">
-              <div className="flex items-center">
-                <div className="flex mr-3 h-12 w-12">
-                  {experience.image && (
-                    <img src={experience.image} alt="Experience Logo" className="object-cover" />
-                  )}
-                </div>
-                <div className="max-w-4/5">
-                  <h2 className="text-l font-bold">{experience.title}</h2>
-                  <h2 className="text-sm font-bold mt-1"><span dangerouslySetInnerHTML={{ __html: experience.subtitle }} /></h2>
-                </div>
-              </div>
-              <div>
-                <p className="text-sm text-gray-600">
-                  {experience.date && (
-                    <div className="mt-2">{experience.date}</div>
-                  )}
-                  {experience.description && (
-                    <div className="mt-2">
-                      <span dangerouslySetInnerHTML={{ __html: experience.description }} />
+          <h3 className="text-lg font-bold mb-3">Industry Experiences</h3>
+          <div className="space-y-2 mb-6">
+            {industryExperiences.map((experience, index) => (
+              <Card key={index}>
+                <div className="flex-grow">
+                  <div className="flex items-start justify-between mb-2">
+                    <div className="flex items-center flex-grow">
+                      <div className="flex-shrink-0 mr-2 h-10 w-10">
+                        {experience.image && (
+                          <img src={experience.image} alt="Experience Logo" className="object-cover w-full h-full" />
+                        )}
+                      </div>
+                      <div className="flex-grow min-w-0">
+                        <h2 className="text-sm font-bold">{experience.title}</h2>
+                        <h2 className="text-xs font-bold mt-1"><span dangerouslySetInnerHTML={{ __html: experience.subtitle }} /></h2>
+                      </div>
                     </div>
-                  )}
-                </p>
-              </div>
-            </div>
-          ))}
+                    <DateDisplay date={experience.date} />
+                  </div>
+                  <div>
+                    <p className="text-xs text-gray-600">
+                      {experience.description && (
+                        <div>
+                          <span dangerouslySetInnerHTML={{ __html: experience.description }} />
+                        </div>
+                      )}
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
         </>
       )}
 
       {academicExperiences.length > 0 && (
         <>
-          <h3 className="text-lg font-bold mt-5">Academic Experiences</h3>
-          {academicExperiences.map((experience, index) => (
-            <div key={index} className="mt-3 border bg-white rounded shadow p-4">
-              <div className="flex items-center">
-                <div className="flex mr-3 h-12 w-12">
-                  {experience.image && (
-                    <img src={experience.image} alt="Experience Logo" className="object-cover" />
-                  )}
-                </div>
-                <div className="max-w-4/5">
-                  <h2 className="text-l font-bold">{experience.title}</h2>
-                  <h2 className="text-sm font-bold mt-1"><span dangerouslySetInnerHTML={{ __html: experience.subtitle }} /></h2>
-                </div>
-              </div>
-              <div>
-                <p className="text-sm text-gray-600">
-                  {experience.date && (
-                    <div className="mt-2">{experience.date}</div>
-                  )}
-                  {experience.description && (
-                    <div className="mt-2">
-                      <span dangerouslySetInnerHTML={{ __html: experience.description }} />
+          <h3 className="text-lg font-bold mb-3">Academic Experiences</h3>
+          <div className="space-y-2">
+            {academicExperiences.map((experience, index) => (
+              <Card key={index}>
+                <div className="flex-grow">
+                  <div className="flex items-start justify-between mb-2">
+                    <div className="flex items-center flex-grow">
+                      <div className="flex-shrink-0 mr-2 h-10 w-10">
+                        {experience.image && (
+                          <img src={experience.image} alt="Experience Logo" className="object-cover w-full h-full" />
+                        )}
+                      </div>
+                      <div className="flex-grow min-w-0">
+                        <h2 className="text-sm font-bold">{experience.title}</h2>
+                        <h2 className="text-xs font-bold mt-1"><span dangerouslySetInnerHTML={{ __html: experience.subtitle }} /></h2>
+                      </div>
                     </div>
-                  )}
-                </p>
-              </div>
-            </div>
-          ))}
+                    <DateDisplay date={experience.date} />
+                  </div>
+                  <div>
+                    <p className="text-xs text-gray-600">
+                      {experience.description && (
+                        <div>
+                          <span dangerouslySetInnerHTML={{ __html: experience.description }} />
+                        </div>
+                      )}
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            ))}
+          </div>
         </>
       )}
     </div>
