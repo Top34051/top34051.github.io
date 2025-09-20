@@ -74,7 +74,7 @@ const experiences = [
   },
   {
     title: 'Quantitative Research Engineer Intern',
-    subtitle: "Citadel LLC",
+    subtitle: "Citadel GQS",
     date: 'May 2024 - Aug 2024',
     description: 'Implemented and improved data pipeline and research framework for Citadel\'s GQS team (C++ and Python)',
     category: 'Industry',
@@ -82,7 +82,7 @@ const experiences = [
   },
   {
     title: 'Quantitative Research Engineer',
-    subtitle: "Citadel LLC",
+    subtitle: "Citadel GQS",
     date: 'Aug 2024 - Present',
     description: 'Streamlined data pipeline specialized in ensuring data quality and regression (C++ and Python)',
     category: 'Industry',

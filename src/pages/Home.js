@@ -10,8 +10,7 @@ import Awards from '../components/Awards';
 import Experiences from '../components/Experiences';
 import Skills from '../components/Skills';
 import SectionDivider from '../components/SectionDivider';
-import CV from '../assets/files/burapacheep_cv_2023.pdf';
-import Resume from '../assets/files/burapacheep_resume_2024.pdf';
+// PDF files are now in the public folder
 
 function Home() {
   return (
@@ -101,12 +100,12 @@ function Home() {
                 </a>
               </li>
               <li>
-                <a href={CV} className="text-blue-500 hover:text-blue-700">
+                <a href="/burapacheep_cv_2023.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">
                   <b>CV</b>
                 </a>
               </li>
               <li>
-                <a href={Resume} className="text-blue-500 hover:text-blue-700">
+                <a href="/burapacheep_resume_2024.pdf" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:text-blue-700">
                   <b>Resume</b>
                 </a>
               </li>
